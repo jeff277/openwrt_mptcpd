@@ -19,16 +19,16 @@ PKG_FIXUP:=autoreconf
 include $(INCLUDE_DIR)/package.mk
 
 define Package/mptcpd
-  SECTION:=net
-  CATEGORY:=Network
-  TITLE:=mptcpd MPTCP daemon
-  URL:=https://github.com/multipath-tcp/mptcpd
-  DEPENDS:=+ell
-  USERID:=mptcpd=320:mptcpd=320
+	SECTION:=net
+	CATEGORY:=Network
+	TITLE:=mptcpd MPTCP daemon
+	URL:=https://github.com/multipath-tcp/mptcpd
+	DEPENDS:=+ell
+	USERID:=mptcpd=320:mptcpd=320
 endef
 
 define Package/mptcpd/description
-  mptcpd is a daemon that serves as a userspace path manager for Multipath TCP (MPTCP).
+	mptcpd is a daemon that serves as a userspace path manager for Multipath TCP (MPTCP).
 endef
 
 define Package/mptcpd/install
@@ -56,5 +56,5 @@ define Package/mptcpd/install
 	$(INSTALL_CONF) $(PKG_INSTALL_DIR)/etc/mptcpd/mptcpd.conf $(1)/etc/mptcpd/
 endef
 
-
 $(eval $(call BuildPackage,mptcpd))
+
